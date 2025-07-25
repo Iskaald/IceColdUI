@@ -1,0 +1,6 @@
+{
+  "name": "IceColdCore.UI.Interface",
+  "references": [
+    "IceColdCore.Interface"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "IceColdCore.UI",
+  "references": [
+    "IceColdCore",
+    "IceColdCore.Interface",
+    
+    "IceColdCore.UI.Interface",
+
+    "IceColdCore.MonoBehaviourHost.Interface",
+    
+    "Unity.TextMeshPro"
+  ]
+}

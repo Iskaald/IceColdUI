@@ -1,4 +1,5 @@
-﻿namespace IceColdCore.UI.Interface
+﻿#if !DOTWEEN
+namespace IceCold.UI.Interface
 {
     public enum AnimationEase
     {
@@ -8,3 +9,4 @@
         Linear
     }
 }
+#endif

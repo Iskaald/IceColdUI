@@ -1,12 +1,12 @@
 ﻿#if DOTWEEN
 using DG.Tweening;
 #endif
-using IceColdCore.UI.Interface;
+using IceCold.UI.Interface;
 using UnityEngine;
 using UnityEngine.UI;
 using Action = System.Action;
 
-namespace IceColdCore.UI
+namespace IceCold.UI
 {
     public abstract class BaseWindow<TView> : MonoBehaviour, IWindow<TView>, IInternalWindow where TView : IWindowView
     {
@@ -50,7 +50,7 @@ namespace IceColdCore.UI
         protected abstract void UpdateData();
         #endregion
 
-        public void ReadyWindow()
+        void IInternalWindow.ReadyWindow()
         {
             if (isInitializing) return;
             isInitializing = true;
@@ -75,7 +75,7 @@ namespace IceColdCore.UI
             }
         }
 
-        public void ShowInternal()
+        void IInternalWindow.ShowInternal()
         {
             WillShow?.Invoke();
 
@@ -89,7 +89,7 @@ namespace IceColdCore.UI
             AnimateShow();
         }
 
-        public void ShowInstantInternal()
+        void IInternalWindow.ShowInstantInternal()
         {
             ProcessShow();
 
@@ -101,7 +101,7 @@ namespace IceColdCore.UI
             OnShown();
         }
 
-        public void HideInternal()
+        void IInternalWindow.HideInternal()
         {
             WillHide?.Invoke();
 
@@ -114,17 +114,17 @@ namespace IceColdCore.UI
             AnimateHide();
         }
 
-        public void HideInstantInternal()
+        void IInternalWindow.HideInstantInternal()
         {
             OnHidden();
         }
 
-        public void DestroySelf()
+        void IInternalWindow.DestroySelf()
         {
             Destroy(gameObject);
         }
 
-       public void Reparent(Transform parent, bool worldPositionStays)
+       void IInternalWindow.Reparent(Transform parent, bool worldPositionStays)
         {
             transform.SetParent(parent, worldPositionStays);
         }

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using IceColdCore.Interface;
-using IceColdCore.MonoBehaviourHost.Interface;
-using IceColdCore.UI.Interface;
+using IceCold.Interface;
+using IceCold.MonoBehaviourHost.Interface;
+using IceCold.UI.Interface;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace IceColdCore.UI
+namespace IceCold.UI
 {
     [ServicePriority(2)]
     public class UIService : IUIService

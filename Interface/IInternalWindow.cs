@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace IceColdCore.UI.Interface
+namespace IceCold.UI.Interface
 {
     public interface IInternalWindow
     {

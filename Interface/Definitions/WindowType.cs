@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IceColdCore.UI.Interface
+namespace IceCold.UI.Interface
 {
     /// <summary>
     /// Defines the type of a UI window.

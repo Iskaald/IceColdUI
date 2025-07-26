@@ -1,14 +1,14 @@
 ﻿#if DOTWEEN
 using DG.Tweening;
 #endif
-using IceColdCore.UI.Interface;
+using IceCold.UI.Interface;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace IceColdCore.UI
+namespace IceCold.UI
 {
     //todo add button sounds, a default or a custom, default defined somewhere, button would take a sound file to play
     public class CustomButton : Button

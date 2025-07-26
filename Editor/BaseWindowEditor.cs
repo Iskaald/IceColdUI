@@ -3,7 +3,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace IceColdCore.UI.Editor
+namespace IceCold.UI.Editor
 {
     [CustomEditor(typeof(BaseWindow<>), true)]
     public class BaseWindowEditor : UnityEditor.Editor

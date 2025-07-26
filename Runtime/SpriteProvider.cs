@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using IceColdCore.UI.Interface;
+using IceCold.UI.Interface;
 using UnityEngine;
 
-namespace IceColdCore.UI
+namespace IceCold.UI
 {
     public static class SpriteProvider
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IceColdCore.UI.Interface
+namespace IceCold.UI.Interface
 {
     public interface IWindow<out TView> : IWindow where TView : IWindowView
     {

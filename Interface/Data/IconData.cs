@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace IceColdCore.UI.Interface
+namespace IceCold.UI.Interface
 {
     [Serializable]
     public class IconData

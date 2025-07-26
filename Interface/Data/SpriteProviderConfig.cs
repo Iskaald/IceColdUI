@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using IceColdCore.Interface;
+using IceCold.Interface;
 using UnityEngine;
 
-namespace IceColdCore.UI.Interface
+namespace IceCold.UI.Interface
 {
-    [CreateAssetMenu(fileName = nameof(SpriteProviderConfig), menuName = "Core/UI/Create Sprite Provider", order = 0)]
+    [CreateAssetMenu(fileName = nameof(SpriteProviderConfig), menuName = "IceCold/UI/Create Sprite Provider", order = 0)]
     public class SpriteProviderConfig : CoreConfig
     {
         public static string ConfigKey => nameof(SpriteProviderConfig);

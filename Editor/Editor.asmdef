@@ -1,11 +1,11 @@
 {
-  "name": "IceColdCore.UI.Editor",
+  "name": "IceCold.UI.Editor",
   "references": [
-    "IceColdCore.Editor",
-    "IceColdCore.Interface",
+    "IceCold.Editor",
+    "IceCold.Interface",
     
-    "IceColdCore.UI.Interface",
-    "IceColdCore.UI"
+    "IceCold.UI.Interface",
+    "IceCold.UI"
   ],
   "includePlatforms": [
     "Editor"

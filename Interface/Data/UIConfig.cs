@@ -1,9 +1,9 @@
-﻿using IceColdCore.Interface;
+﻿using IceCold.Interface;
 using UnityEngine;
 
-namespace IceColdCore.UI.Interface
+namespace IceCold.UI.Interface
 {
-    [CreateAssetMenu(fileName = nameof(UIConfig), menuName = "Core/UI/Create Config", order = 0)]
+    [CreateAssetMenu(fileName = nameof(UIConfig), menuName = "IceCold/UI/Create Config", order = 0)]
     public class UIConfig : CoreConfig
     {
         public static string ConfigKey => nameof(UIConfig);

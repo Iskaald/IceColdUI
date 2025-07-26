@@ -1,6 +1,6 @@
 {
-  "name": "IceColdCore.UI.Interface",
+  "name": "IceCold.UI.Interface",
   "references": [
-    "IceColdCore.Interface"
+    "IceCold.Interface"
   ]
 }

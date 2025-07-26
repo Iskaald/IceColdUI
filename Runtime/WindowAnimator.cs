@@ -1,14 +1,13 @@
 ﻿using System;
-using IceColdCore.UI.Interface;
+using IceCold.UI.Interface;
 using UnityEngine;
 #if DOTWEEN
 using DG.Tweening;
-using UnityEngine;
 #else
 using System.Collections;
 #endif
 
-namespace IceColdCore.UI
+namespace IceCold.UI
 {
 #if DOTWEEN
     public class WindowAnimator

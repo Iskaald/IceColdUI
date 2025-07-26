@@ -1,6 +1,6 @@
-﻿using IceColdCore.Interface;
+﻿using IceCold.Interface;
 
-namespace IceColdCore.UI.Interface
+namespace IceCold.UI.Interface
 {
     public interface IUIService : ICoreService
     {

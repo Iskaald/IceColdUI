@@ -1,4 +1,4 @@
-﻿namespace IceColdCore.UI.Editor
+﻿namespace IceCold.UI.Editor
 {
     using UnityEngine;
     using UnityEditor;

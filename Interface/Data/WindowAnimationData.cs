@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 #endif
 
-namespace IceColdCore.UI.Interface
+namespace IceCold.UI.Interface
 {
     public class WindowAnimationData
     {

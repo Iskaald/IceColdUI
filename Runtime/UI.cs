@@ -1,6 +1,6 @@
-﻿using IceColdCore.UI.Interface;
+﻿using IceCold.UI.Interface;
 
-namespace IceColdCore.UI
+namespace IceCold.UI
 {
     public class UI
     {

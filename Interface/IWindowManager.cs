@@ -1,4 +1,4 @@
-﻿namespace IceColdCore.UI.Interface
+﻿namespace IceCold.UI.Interface
 {
     public interface IWindowManager
     {

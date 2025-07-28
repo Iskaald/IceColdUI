@@ -1,5 +1,4 @@
-﻿using IceCold.Editor;
-using IceCold.UI.Interface;
+﻿using IceCold.UI.Interface;
 using UnityEditor;
 
 namespace IceCold.Editor

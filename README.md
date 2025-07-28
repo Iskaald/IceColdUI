@@ -1,0 +1,1 @@
+A modular UI management system for registering, opening, and controlling user interface windows and elements. Includes base classes and interfaces for building extensible UI components.

@@ -3,6 +3,7 @@ using IceCold.UI.Interface;
 using UnityEngine;
 #if DOTWEEN
 using DG.Tweening;
+
 #else
 using System.Collections;
 #endif
@@ -33,7 +34,7 @@ namespace IceCold.UI
         public void AnimateHide(WindowAnimationData data, Action callback = null)
         {
 #if DOTWEEN
-            AnimateHideWithDoTween(data,callback);
+            AnimateHideWithDoTween(data, callback);
 #else
             ProcessAnimateHide(data, callback);
 #endif
@@ -43,7 +44,7 @@ namespace IceCold.UI
         private void AnimateShowWithDoTween(WindowAnimationData data, Action callback)
         {
             animationSequence?.Complete(false);
-            
+
             if (data.fade != null)
             {
                 var transparent = data.fade.color;
@@ -54,21 +55,32 @@ namespace IceCold.UI
             if (data.scalableContent == null) data.scalableContent = data.window.transform;
             data.scalableContent.localScale = Vector3.zero;
             data.window.SetActive(true);
-            
+
             animationSequence = DOTween.Sequence();
             animationSequence.OnComplete(() => callback?.Invoke());
+
+            animationSequence.Append(data.scalableContent.DOScale(Vector3.one, data.animationDuration)
+                .SetEase(data.animationEase));
             
-            animationSequence.Append(data.scalableContent.DOScale(Vector3.one, data.animationDuration).SetEase(data.animationEase));
-            if (data.fade != null)
-                animationSequence.Join(data.fade.DOColor(data.defaultFadeColor!.Value, data.animationDuration).SetEase(data.animationEase));
+            if (data.fade)
+            {
+                animationSequence.Join(
+                    DOTween.To(
+                        () => data.fade.color,
+                        c => data.fade.color = c,
+                        data.defaultFadeColor!.Value,
+                        data.animationDuration
+                    ).SetEase(data.animationEase)
+                );
+            }
 
             animationSequence.Play();
         }
-        
+
         private void AnimateHideWithDoTween(WindowAnimationData data, Action callback)
         {
             animationSequence?.Complete(false);
-            
+
             animationSequence = DOTween.Sequence();
             animationSequence.OnComplete(() => callback?.Invoke());
 
@@ -78,17 +90,25 @@ namespace IceCold.UI
                 transparent = data.defaultFadeColor!.Value;
                 transparent.a = 0;
             }
-            
+
             if (data.scalableContent == null) data.scalableContent = data.window.transform;
+
+            animationSequence.Append(data.scalableContent.DOScale(Vector3.zero, data.animationDuration)
+                .SetEase(data.animationEase));
             
-            animationSequence.Append(data.scalableContent.DOScale(Vector3.zero, data.animationDuration).SetEase(data.animationEase));
-            if (data.fade != null)
-                animationSequence.Append(data.fade.DOColor(transparent, data.animationDuration).SetEase(data.animationEase));
+            if (data.fade)
+            {
+                animationSequence.Join(DOTween.To(
+                    () => data.fade.color,
+                    (newColor) => data.fade.color = newColor,
+                    transparent,
+                    data.animationDuration
+                ).SetEase(data.animationEase));
+            }
             
             animationSequence.Play();
         }
 #else
-
         private void ProcessAnimateShow(WindowAnimationData data, Action callback)
         {
             if (animationCoroutine != null)
@@ -214,5 +234,5 @@ namespace IceCold.UI
             data.window.SetActive(false);
         }
 #endif
+        }
     }
-}

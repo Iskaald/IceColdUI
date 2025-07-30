@@ -1,6 +1,6 @@
 {
   "name": "com.iskaald.ui",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "displayName": "Ice Cold UI",
   "description": "Provides a centralized system for registering, opening, and managing UI windows. Includes base classes and interfaces for building modular and extensible UI components.",
   "unity": "2021.3",

@@ -4,7 +4,7 @@ using UnityEngine;
 namespace IceCold.UI.Interface
 {
     [CreateAssetMenu(fileName = nameof(UIConfig), menuName = "IceCold/UI/Create Config", order = 0)]
-    public class UIConfig : CoreConfig
+    public class UIConfig : IceColdConfig
     {
         public static string ConfigKey => nameof(UIConfig);
         public override string Key => ConfigKey;

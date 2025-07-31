@@ -5,7 +5,7 @@ using UnityEngine;
 namespace IceCold.UI.Interface
 {
     [CreateAssetMenu(fileName = nameof(SpriteProviderConfig), menuName = "IceCold/UI/Create Sprite Provider", order = 0)]
-    public class SpriteProviderConfig : CoreConfig
+    public class SpriteProviderConfig : IceColdConfig
     {
         public static string ConfigKey => nameof(SpriteProviderConfig);
         public override string Key => ConfigKey;

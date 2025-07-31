@@ -3,7 +3,7 @@ using UnityEditor;
 
 namespace IceCold.Editor
 {
-    public class UICoreMenu : CoreMenu
+    public class UICoreMenu : IceColdMenu
     {
         [MenuItem("IceCold/UI/Config", priority = 20)]
         private static void SelectUIConfig()

@@ -2,7 +2,7 @@
 
 namespace IceCold.UI.Interface
 {
-    public interface IUIService : ICoreService
+    public interface IUIService : IIceColdService
     {
         public T GetWindow<T>(string id = null) where T : class, IWindow;
         public IWindow GetWindow(string id);

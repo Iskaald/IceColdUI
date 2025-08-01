@@ -77,10 +77,7 @@ namespace IceCold.UI
             IsInitialized = false;
         }
         
-        public bool OnWillQuit()
-        {
-            return true;
-        }
+        public void OnWillQuit() { }
         
         private void RegisterWindow(IWindow window, Scene scene)
         {

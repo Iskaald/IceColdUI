@@ -27,7 +27,7 @@ namespace IceCold.UI
         {
             if (IsInitialized) return;
             
-            config = ConfigLoader.GetConfig<UIConfig>(UIConfig.ConfigKey);
+            config = ConfigLoader.Get<UIConfig>(nameof(UIConfig));
             if (config == null) return;
             
             CreateWindowStructure();

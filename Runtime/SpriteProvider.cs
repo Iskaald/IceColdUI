@@ -14,7 +14,7 @@ namespace IceCold.UI
         {
             if (isInitialized) return;
 
-            data = Resources.Load<SpriteProviderConfig>(SpriteProviderConfig.ConfigKey);
+            data = Resources.Load<SpriteProviderConfig>(nameof(SpriteProviderConfig));
             isInitialized = true;
         }
 

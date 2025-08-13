@@ -7,9 +7,6 @@ namespace IceCold.UI.Interface
     [CreateAssetMenu(fileName = nameof(SpriteProviderConfig), menuName = "IceCold/UI/Create Sprite Provider", order = 0)]
     public class SpriteProviderConfig : IceColdConfig
     {
-        public static string ConfigKey => nameof(SpriteProviderConfig);
-        public override string Key => ConfigKey;
-        
         public Sprite falloutSprite = null;
         public List<IconData> sprites = new();
         public List<ColorData> colors = new();
